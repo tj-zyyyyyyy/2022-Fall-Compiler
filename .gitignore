@@ -1,0 +1,11 @@
+main.exe
+main.ilk
+main.obj
+main.pdb
+out_all_Item_set.txt
+out_lexer.txt
+out_LRanalyze.txt
+out_LRtable.txt
+SyntaxTree.png
+vc140.pdb
+.vscode/tasks.json
