@@ -9,3 +9,4 @@ out_LRtable.txt
 SyntaxTree.png
 vc140.pdb
 .vscode/tasks.json
+.vscode/launch.json
