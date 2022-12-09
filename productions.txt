@@ -1,0 +1,24 @@
+<Program> ::= <GlobalDefList>
+<GlobalDefList> ::= <GlobalDef> <GlobalDefList> | Epsilon
+<GlobalDef> ::= <Def> ; | <FuncType> id ( <Params> ) <Block>
+<FuncType> ::= int | void | double
+<Params> ::= Epsilon | <Def> | <Def> , <Params>
+<Block> ::= { <DefList> <StateList> }
+<DefList> ::= <Def> ; <DefList> | Epsilon
+<Def> ::= int id | double id
+<StateList> ::= <State> <StateList> | Epsilon
+<State> ::= <if> | <while> | <return> ;  | <Assign> ; | <call> ;
+<Assign> ::= id = <Exp>
+<return> ::= return | return <Exp>
+<while> ::= while ( <Exp> ) <Block>
+<if> ::= if ( <Exp> ) <Block> | if ( <Exp> ) <Block> else <Block>
+<Exp> ::= <AddSubExp> <Tmp3>
+<Tmp3> ::= <relop> <AddSubExp> <Tmp3> | Epsilon
+<relop> ::= < | <= | > | >= | == | !=
+<AddSubExp> ::= <Item> <Tmp4>
+<Tmp4> ::= + <Item> <Tmp4> | - <Item> <Tmp4> | Epsilon
+<Item> ::= <Factor> <Tmp5>
+<Tmp5> ::= * <Factor> <Tmp5> | / <Factor> <Tmp5> | Epsilon
+<Factor> ::= num | ( <Exp> ) | id | <call>
+<call> ::= id ( <Args> )
+<Args> ::= <Exp> , <Args> | <Exp> | Epsilon

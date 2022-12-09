@@ -1,0 +1,18 @@
+int main()	//这是一个测试
+{
+	double a;
+	double b;
+	int c;
+	a=3.5;
+	b=4.999999;
+	c=a+b;
+	while(a<=10)
+	{
+		a=a+1;
+	}
+	if(c==7)
+	{
+		func(c);
+	}
+	return 0;
+}
