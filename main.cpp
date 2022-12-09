@@ -38,7 +38,6 @@ int main()
 	input += "#";
 	cout << "词法分析完毕!" << endl;
 	cout << "输出词法分析结果的文件名为：out_lexer.txt" << endl << endl;
-
 	cout << "语法分析进行中..." << endl;
 	GETanalyzer Ga(name2);
 	Ga.use();

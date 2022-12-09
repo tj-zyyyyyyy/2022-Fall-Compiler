@@ -1,0 +1,186 @@
+序号 状态                                    符号                                    输入串                                  
+1    0                                       #                                       int main()	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+2    0 2                                     # int                                   main()	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+3    0 6                                     # <FuncType>                            main()	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+4    0 6 11                                  # <FuncType> main                       ()	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+5    0 6 11 13                               # <FuncType> main (                     )	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+6    0 6 11 13 16                            # <FuncType> main ( <Params>            )	//{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+7    0 6 11 13 16 20                         # <FuncType> main ( <Params> )          //{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+8    0 6 11 13 16 20 22                      # <FuncType> main ( <Params> ) {        /{	double a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+9    0 6 11 13 16 20 22 26                   # <FuncType> main ( <Params> ) { double ble a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+10   0 6 11 13 16 20 22 26 9                 # <FuncType> main ( <Params> ) { double a le a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+11   0 6 11 13 16 20 22 28                   # <FuncType> main ( <Params> ) { <Def>  le a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+12   0 6 11 13 16 20 22 28 40                # <FuncType> main ( <Params> ) { <Def> ; e a;	double b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+13   0 6 11 13 16 20 22 28 40 26             # <FuncType> main ( <Params> ) { <Def> ; double ouble b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+14   0 6 11 13 16 20 22 28 40 26 9           # <FuncType> main ( <Params> ) { <Def> ; double b uble b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+15   0 6 11 13 16 20 22 28 40 28             # <FuncType> main ( <Params> ) { <Def> ; <Def> uble b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+16   0 6 11 13 16 20 22 28 40 28 40          # <FuncType> main ( <Params> ) { <Def> ; <Def> ; ble b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+17   0 6 11 13 16 20 22 28 40 28 40 25       # <FuncType> main ( <Params> ) { <Def> ; <Def> ; int b;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+18   0 6 11 13 16 20 22 28 40 28 40 25 8     # <FuncType> main ( <Params> ) { <Def> ; <Def> ; int c ;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+19   0 6 11 13 16 20 22 28 40 28 40 28       # <FuncType> main ( <Params> ) { <Def> ; <Def> ; <Def> ;	int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+20   0 6 11 13 16 20 22 28 40 28 40 28 40    # <FuncType> main ( <Params> ) { <Def> ; <Def> ; <Def> ; int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+21   0 6 11 13 16 20 22 28 40 28 40 28 40 58 # <FuncType> main ( <Params> ) { <Def> ; <Def> ; <Def> ; <DefList> int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+22   0 6 11 13 16 20 22 28 40 28 40 58       # <FuncType> main ( <Params> ) { <Def> ; <Def> ; <DefList> int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+23   0 6 11 13 16 20 22 28 40 58             # <FuncType> main ( <Params> ) { <Def> ; <DefList> int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+24   0 6 11 13 16 20 22 27                   # <FuncType> main ( <Params> ) { <DefList> int c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+25   0 6 11 13 16 20 22 27 29                # <FuncType> main ( <Params> ) { <DefList> a nt c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+26   0 6 11 13 16 20 22 27 29 42             # <FuncType> main ( <Params> ) { <DefList> a = t c;	a=3.5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+27   0 6 11 13 16 20 22 27 29 42 45          # <FuncType> main ( <Params> ) { <DefList> a = 3.500000 .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+28   0 6 11 13 16 20 22 27 29 42 46          # <FuncType> main ( <Params> ) { <DefList> a = <Factor> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+29   0 6 11 13 16 20 22 27 29 42 46 80       # <FuncType> main ( <Params> ) { <DefList> a = <Factor> <Tmp5> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+30   0 6 11 13 16 20 22 27 29 42 47          # <FuncType> main ( <Params> ) { <DefList> a = <Item> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+31   0 6 11 13 16 20 22 27 29 42 47 83       # <FuncType> main ( <Params> ) { <DefList> a = <Item> <Tmp4> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+32   0 6 11 13 16 20 22 27 29 42 49          # <FuncType> main ( <Params> ) { <DefList> a = <AddSubExp> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+33   0 6 11 13 16 20 22 27 29 42 49 90       # <FuncType> main ( <Params> ) { <DefList> a = <AddSubExp> <Tmp3> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+34   0 6 11 13 16 20 22 27 29 42 68          # <FuncType> main ( <Params> ) { <DefList> a = <Exp> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+35   0 6 11 13 16 20 22 27 35                # <FuncType> main ( <Params> ) { <DefList> <Assign> .5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+36   0 6 11 13 16 20 22 27 35 55             # <FuncType> main ( <Params> ) { <DefList> <Assign> ; 5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+37   0 6 11 13 16 20 22 27 34                # <FuncType> main ( <Params> ) { <DefList> <State> 5;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+38   0 6 11 13 16 20 22 27 34 29             # <FuncType> main ( <Params> ) { <DefList> <State> b ;	b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+39   0 6 11 13 16 20 22 27 34 29 42          # <FuncType> main ( <Params> ) { <DefList> <State> b = b=4.999999;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+40   0 6 11 13 16 20 22 27 34 29 42 45       # <FuncType> main ( <Params> ) { <DefList> <State> b = 4.999999 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+41   0 6 11 13 16 20 22 27 34 29 42 46       # <FuncType> main ( <Params> ) { <DefList> <State> b = <Factor> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+42   0 6 11 13 16 20 22 27 34 29 42 46 80    # <FuncType> main ( <Params> ) { <DefList> <State> b = <Factor> <Tmp5> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+43   0 6 11 13 16 20 22 27 34 29 42 47       # <FuncType> main ( <Params> ) { <DefList> <State> b = <Item> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+44   0 6 11 13 16 20 22 27 34 29 42 47 83    # <FuncType> main ( <Params> ) { <DefList> <State> b = <Item> <Tmp4> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+45   0 6 11 13 16 20 22 27 34 29 42 49       # <FuncType> main ( <Params> ) { <DefList> <State> b = <AddSubExp> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+46   0 6 11 13 16 20 22 27 34 29 42 49 90    # <FuncType> main ( <Params> ) { <DefList> <State> b = <AddSubExp> <Tmp3> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+47   0 6 11 13 16 20 22 27 34 29 42 68       # <FuncType> main ( <Params> ) { <DefList> <State> b = <Exp> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+48   0 6 11 13 16 20 22 27 34 35             # <FuncType> main ( <Params> ) { <DefList> <State> <Assign> 99;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+49   0 6 11 13 16 20 22 27 34 35 55          # <FuncType> main ( <Params> ) { <DefList> <State> <Assign> ; 9;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+50   0 6 11 13 16 20 22 27 34 34             # <FuncType> main ( <Params> ) { <DefList> <State> <State> 9;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+51   0 6 11 13 16 20 22 27 34 34 29          # <FuncType> main ( <Params> ) { <DefList> <State> <State> c ;	c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+52   0 6 11 13 16 20 22 27 34 34 29 42       # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = c=a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+53   0 6 11 13 16 20 22 27 34 34 29 42 43    # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = a =a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+54   0 6 11 13 16 20 22 27 34 34 29 42 46    # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Factor> =a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+55   0 6 11 13 16 20 22 27 34 34 29 42 46 80 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Factor> <Tmp5> =a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+56   0 6 11 13 16 20 22 27 34 34 29 42 47    # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> =a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+57   0 6 11 13 16 20 22 27 34 34 29 42 47 81 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + a+b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+58   0 6 11 13 16 20 22 27 34 34 29 42 47 81 43 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + b +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+59   0 6 11 13 16 20 22 27 34 34 29 42 47 81 46 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + <Factor> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+60   0 6 11 13 16 20 22 27 34 34 29 42 47 81 46 80 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + <Factor> <Tmp5> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+61   0 6 11 13 16 20 22 27 34 34 29 42 47 81 120 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + <Item> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+62   0 6 11 13 16 20 22 27 34 34 29 42 47 81 120 143 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> + <Item> <Tmp4> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+63   0 6 11 13 16 20 22 27 34 34 29 42 47 83 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Item> <Tmp4> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+64   0 6 11 13 16 20 22 27 34 34 29 42 49    # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <AddSubExp> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+65   0 6 11 13 16 20 22 27 34 34 29 42 49 90 # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <AddSubExp> <Tmp3> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+66   0 6 11 13 16 20 22 27 34 34 29 42 68    # <FuncType> main ( <Params> ) { <DefList> <State> <State> c = <Exp> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+67   0 6 11 13 16 20 22 27 34 34 35          # <FuncType> main ( <Params> ) { <DefList> <State> <State> <Assign> +b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+68   0 6 11 13 16 20 22 27 34 34 35 55       # <FuncType> main ( <Params> ) { <DefList> <State> <State> <Assign> ; b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+69   0 6 11 13 16 20 22 27 34 34 34          # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> b;	while(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+70   0 6 11 13 16 20 22 27 34 34 34 31       # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ile(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+71   0 6 11 13 16 20 22 27 34 34 34 31 51    # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( le(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+72   0 6 11 13 16 20 22 27 34 34 34 31 51 70 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( a e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+73   0 6 11 13 16 20 22 27 34 34 34 31 51 73 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Factor> e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+74   0 6 11 13 16 20 22 27 34 34 34 31 51 73 111 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Factor> <Tmp5> e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+75   0 6 11 13 16 20 22 27 34 34 34 31 51 74 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Item> e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+76   0 6 11 13 16 20 22 27 34 34 34 31 51 74 114 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Item> <Tmp4> e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+77   0 6 11 13 16 20 22 27 34 34 34 31 51 76 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> e(a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+78   0 6 11 13 16 20 22 27 34 34 34 31 51 76 85 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <= a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+79   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> a<=10)	{		a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+80   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 72 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> 10.000000 a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+81   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 73 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <Factor> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+82   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 73 111 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <Factor> <Tmp5> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+83   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 74 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <Item> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+84   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 74 114 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <Item> <Tmp4> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+85   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 140 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <AddSubExp> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+86   0 6 11 13 16 20 22 27 34 34 34 31 51 76 117 140 161 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <relop> <AddSubExp> <Tmp3> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+87   0 6 11 13 16 20 22 27 34 34 34 31 51 76 116 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <AddSubExp> <Tmp3> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+88   0 6 11 13 16 20 22 27 34 34 34 31 51 92 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> a=a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+89   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) =a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+90   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+91   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a+1;	}	if(c==7)	{		func(c);	}	return 0;}#
+92   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a +1;	}	if(c==7)	{		func(c);	}	return 0;}#
+93   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = 1;	}	if(c==7)	{		func(c);	}	return 0;}# 
+94   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 43 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = a ;	}	if(c==7)	{		func(c);	}	return 0;}#  
+95   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 46 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Factor> ;	}	if(c==7)	{		func(c);	}	return 0;}#  
+96   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 46 80 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Factor> <Tmp5> ;	}	if(c==7)	{		func(c);	}	return 0;}#  
+97   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> ;	}	if(c==7)	{		func(c);	}	return 0;}#  
+98   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + }	if(c==7)	{		func(c);	}	return 0;}#    
+99   0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 45 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + 1.000000 7)	{		func(c);	}	return 0;}#            
+100  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 46 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + <Factor> 7)	{		func(c);	}	return 0;}#            
+101  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 46 80 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + <Factor> <Tmp5> 7)	{		func(c);	}	return 0;}#            
+102  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 120 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + <Item> 7)	{		func(c);	}	return 0;}#            
+103  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 81 120 143 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> + <Item> <Tmp4> 7)	{		func(c);	}	return 0;}#            
+104  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 47 83 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Item> <Tmp4> 7)	{		func(c);	}	return 0;}#            
+105  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 49 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <AddSubExp> 7)	{		func(c);	}	return 0;}#            
+106  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 49 90 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <AddSubExp> <Tmp3> 7)	{		func(c);	}	return 0;}#            
+107  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 29 42 68 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> a = <Exp> 7)	{		func(c);	}	return 0;}#            
+108  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 35 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <Assign> 7)	{		func(c);	}	return 0;}#            
+109  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 35 55 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <Assign> ; )	{		func(c);	}	return 0;}#             
+110  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 34 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <State> )	{		func(c);	}	return 0;}#             
+111  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 34 54 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <State> <StateList> )	{		func(c);	}	return 0;}#             
+112  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 165 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <StateList> )	{		func(c);	}	return 0;}#             
+113  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 146 162 165 168 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) { <DefList> <StateList> } {		func(c);	}	return 0;}#               
+114  0 6 11 13 16 20 22 27 34 34 34 31 51 92 123 147 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> while ( <Exp> ) <Block> {		func(c);	}	return 0;}#               
+115  0 6 11 13 16 20 22 27 34 34 34 37       # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <while> {		func(c);	}	return 0;}#               
+116  0 6 11 13 16 20 22 27 34 34 34 34       # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> {		func(c);	}	return 0;}#               
+117  0 6 11 13 16 20 22 27 34 34 34 34 32    # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if func(c);	}	return 0;}#                  
+118  0 6 11 13 16 20 22 27 34 34 34 34 32 52 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( unc(c);	}	return 0;}#                   
+119  0 6 11 13 16 20 22 27 34 34 34 34 32 52 70 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( c nc(c);	}	return 0;}#                    
+120  0 6 11 13 16 20 22 27 34 34 34 34 32 52 73 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Factor> nc(c);	}	return 0;}#                    
+121  0 6 11 13 16 20 22 27 34 34 34 34 32 52 73 111 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Factor> <Tmp5> nc(c);	}	return 0;}#                    
+122  0 6 11 13 16 20 22 27 34 34 34 34 32 52 74 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Item> nc(c);	}	return 0;}#                    
+123  0 6 11 13 16 20 22 27 34 34 34 34 32 52 74 114 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Item> <Tmp4> nc(c);	}	return 0;}#                    
+124  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> nc(c);	}	return 0;}#                    
+125  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 88 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> == (c);	}	return 0;}#                      
+126  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> (c);	}	return 0;}#                      
+127  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 72 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> 7.000000 eturn 0;}#                              
+128  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 73 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <Factor> eturn 0;}#                              
+129  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 73 111 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <Factor> <Tmp5> eturn 0;}#                              
+130  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 74 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <Item> eturn 0;}#                              
+131  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 74 114 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <Item> <Tmp4> eturn 0;}#                              
+132  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 140 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <AddSubExp> eturn 0;}#                              
+133  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 117 140 161 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <relop> <AddSubExp> <Tmp3> eturn 0;}#                              
+134  0 6 11 13 16 20 22 27 34 34 34 34 32 52 76 116 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <AddSubExp> <Tmp3> eturn 0;}#                              
+135  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> eturn 0;}#                              
+136  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) turn 0;}#                               
+137  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { urn 0;}#                                
+138  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> urn 0;}#                                
+139  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func 0;}#                                    
+140  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( ;}#                                     
+141  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 59 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( c }#                                      
+142  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 62 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Factor> }#                                      
+143  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 62 98 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Factor> <Tmp5> }#                                      
+144  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 63 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Item> }#                                      
+145  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 63 101 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Item> <Tmp4> }#                                      
+146  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 65 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <AddSubExp> }#                                      
+147  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 65 103 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <AddSubExp> <Tmp3> }#                                      
+148  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 64 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Exp> }#                                      
+149  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 67 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Args> }#                                      
+150  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 29 41 67 105 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> func ( <Args> ) #                                       
+151  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 39 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <call> #                                       
+152  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 39 57 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <call> ;                                         
+153  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 34 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <State>                                         
+154  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 34 54 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <State> <StateList>                                         
+155  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 166 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <StateList>                                         
+156  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 148 163 166 169 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) { <DefList> <StateList> }                                         
+157  0 6 11 13 16 20 22 27 34 34 34 34 32 52 93 124 149 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> if ( <Exp> ) <Block>                                         
+158  0 6 11 13 16 20 22 27 34 34 34 34 38    # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <if>                                         
+159  0 6 11 13 16 20 22 27 34 34 34 34 34    # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State>                                         
+160  0 6 11 13 16 20 22 27 34 34 34 34 34 30 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return                                         
+161  0 6 11 13 16 20 22 27 34 34 34 34 34 30 45 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return 0.000000                                         
+162  0 6 11 13 16 20 22 27 34 34 34 34 34 30 46 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <Factor>                                         
+163  0 6 11 13 16 20 22 27 34 34 34 34 34 30 46 80 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <Factor> <Tmp5>                                         
+164  0 6 11 13 16 20 22 27 34 34 34 34 34 30 47 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <Item>                                         
+165  0 6 11 13 16 20 22 27 34 34 34 34 34 30 47 83 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <Item> <Tmp4>                                         
+166  0 6 11 13 16 20 22 27 34 34 34 34 34 30 49 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <AddSubExp>                                         
+167  0 6 11 13 16 20 22 27 34 34 34 34 34 30 49 90 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <AddSubExp> <Tmp3>                                         
+168  0 6 11 13 16 20 22 27 34 34 34 34 34 30 48 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> return <Exp>                                         
+169  0 6 11 13 16 20 22 27 34 34 34 34 34 36 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> <return>                                         
+170  0 6 11 13 16 20 22 27 34 34 34 34 34 36 56 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> <return> ;                                         
+171  0 6 11 13 16 20 22 27 34 34 34 34 34 34 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> <State>                                         
+172  0 6 11 13 16 20 22 27 34 34 34 34 34 34 54 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> <State> <StateList>                                         
+173  0 6 11 13 16 20 22 27 34 34 34 34 34 54 # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <State> <StateList>                                         
+174  0 6 11 13 16 20 22 27 34 34 34 34 54    # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <State> <StateList>                                         
+175  0 6 11 13 16 20 22 27 34 34 34 54       # <FuncType> main ( <Params> ) { <DefList> <State> <State> <State> <StateList>                                         
+176  0 6 11 13 16 20 22 27 34 34 54          # <FuncType> main ( <Params> ) { <DefList> <State> <State> <StateList>                                         
+177  0 6 11 13 16 20 22 27 34 54             # <FuncType> main ( <Params> ) { <DefList> <State> <StateList>                                         
+178  0 6 11 13 16 20 22 27 33                # <FuncType> main ( <Params> ) { <DefList> <StateList>                                         
+179  0 6 11 13 16 20 22 27 33 53             # <FuncType> main ( <Params> ) { <DefList> <StateList> }                                         
+180  0 6 11 13 16 20 23                      # <FuncType> main ( <Params> ) <Block>                                          
+181  0 4                                     # <GlobalDef>                                                                   
+182  0 4 10                                  # <GlobalDef> <GlobalDefList>                                                   
+183  0 5                                     # <GlobalDefList>                                                               
+语法分析成功！
+生成语法树图片成功！请见当前目录下SyntaxTree.png
