@@ -10,3 +10,6 @@ SyntaxTree.png
 vc140.pdb
 .vscode/tasks.json
 .vscode/launch.json
+.vscode/settings.json
+out_Code.txt
+Graphviz/SyntaxTree.dot
