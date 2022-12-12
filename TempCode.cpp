@@ -1,177 +1,90 @@
-#pragma once
-#include <string>
-#include <vector>
-#include "GETanalyzer.h"
-using namespace std;
+#include <fstream>
+#include <iostream>
+#include "TempCode.h"
 
-struct Quaternary {
-	string op;
-	string src1;
-	string src2;
-	string des;
-};
-
-class TempCode
+void TempCode::push(string* sym)
 {
-public:
-	void push(string* sym);
-	void reduce(Production pro);
-	void emit(string op, string src1, string src2, string des);
-	void printTempCode(const char* Filename);
+    symbol.push_back(sym);
+    return;
+}
 
-private:
-	vector<Quaternary> code;
-	vector<string*>symbol;
-
-	void popStack(int count);
-};
-
-enum DecType {
-	DEC_VAR, DEC_FUN
-};
-
-//数据类型（int/void）
-enum DType { D_VOID, D_INT };
-
-
-struct Var {
-	string name;
-	DType type;
-	int level;
-};
-
-struct Func {
-	string name;
-	DType returnType;
-	list<DType> paramTypes;
-	int enterPoint;
-};
-
-class Id
+void TempCode::reduce(Production pro)
 {
-public:
-	string name;
-	Id(const string& sym, const string& name);
-};
+	if (pro.left_symbol == "<Assign>")  //<Assign> ::= id = <Exp>
+	{
+		Expression* exp = (Expression*)symbol.back();
+		Id* id = (Id*)symbol[symbol.size() - 3];
+		string* assign_sentence = new string(pro.left_symbol);
+		emit(":=", exp->name, "-", id->name);
+		popStack(pro.right_symbol.size());
+		symbol.push_back(new string(pro.left_symbol));
+	}
+	else if (pro.left_symbol == "<Exp>")  //<Exp> ::= <AddSubExp> <Tmp3>
+	{
+		string* tmp3 = symbol.back();
+		AddExpression* addsubexp = (AddExpression*)symbol[symbol.size() - 2];
+		Expression* expression = new Expression(pro.left_symbol);
+		expression->name = addsubexp->name;
+		popStack(pro.right_symbol.size());
+		symbol.push_back((string*)expression);
+	}
+    return;
+}
 
-class Num
+void TempCode::emit(string op, string src1, string src2, string des)
 {
-public:
-	string number;
-	Num(const string& sym, const string& number);
-};
+    code.push_back(Quaternary{ op,src1,src2,des });
+	return;
+}
 
-class FunctionDeclare
+void TempCode::printTempCode(const char* Filename)
 {
-public:
-	list<DType>plist;
-	FunctionDeclare(const string& sym);
-};
+    auto oldbuf = cout.rdbuf();
+    ofstream out(Filename);
+    cout.rdbuf(out.rdbuf());
+    for (int i = 0; i < code.size(); i++)
+    {
+        cout << "(" << code[i].op << "," << code[i].src1 << "," << code[i].src2 << "," << code[i].des << ")\n";
+    }
+    cout.rdbuf(oldbuf);
+    out.close();
+	return;
+}
 
-class Parameter
+void TempCode::popStack(int count)
 {
-public:
-	list<DType>plist;
-	Parameter(const string& sym);
-};
+	while (count--)
+		symbol.pop_back();
+	return;
+}
 
-class ParameterList
-{
-public:
-	list<DType>plist;
-	ParameterList(const string& sym);
-};
+list<int>merge(list<int>& l1, list<int>& l2) {
+	list<int>ret;
+	ret.assign(l1.begin(), l1.end());
+	ret.splice(ret.end(), l2);
+	return ret;
+}
 
-class SentenceBlock
-{
-public:
-	list<int>nextList;
-	SentenceBlock(const string& sym);
-};
+NewTemper::NewTemper() {
+	now = 0;
+}
 
-class SentenceList
-{
-public:
-	list<int>nextList;
-	SentenceList(const string& sym);
-};
+string NewTemper::newTemp() {
+	return string("T") + to_string(now++);
+}
 
-class Sentence
-{
-public:
-	list<int>nextList;
-	Sentence(const string& sym);
-};
+Id::Id(const string& sym, const string& name) {
+	this->name = name;
+}
 
-class WhileSentence
-{
-public:
-	list<int>nextList;
-	WhileSentence(const string& sym);
-};
+Num::Num(const string& sym, const string& number) {
+	this->number = number;
+}
 
-class IfSentence
-{
-public:
-	list<int>nextList;
-	IfSentence(const string& sym);
-};
+Expression::Expression(const string& sym) {
+	this->name = sym;
+}
 
-class Expression
-{
-public:
-	string name;
-	list<int>falseList;
-	Expression(const string& sym);
-};
-
-class M
-{
-public:
-	int quad;
-	M(const string& sym);
-};
-
-class N
-{
-public:
-	list<int> nextList;
-	N(const string& sym);
-};
-
-class AddExpression
-{
-public:
-	string name;
-	AddExpression(const string& sym);
-};
-
-class Nomial
-{
-public:
-	string name;
-	Nomial(const string& sym);
-};
-
-class Factor
-{
-public:
-	string name;
-	Factor(const string& sym);
-};
-
-class ArgumentList
-{
-public:
-	list<string> alist;
-	ArgumentList(const string& sym);
-};
-
-class NewTemper
-{
-private:
-	int now;
-public:
-	NewTemper();
-	string newTemp();
-};
+AddExpression::AddExpression(const string& sym) {
+	this->name = sym;
+}
