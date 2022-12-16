@@ -1,18 +1,45 @@
-int main()	//这是一个测试
+int add(int a,int b)
 {
-	double a;
-	double b;
+	return a+b;
+}
+
+int squaresum(int n)
+{
+	int sum;
+	int i;
+	sum=0;
+	i=0;
+	if(n<=0)
+	{
+		return 0;
+	}
+	while(i<=n)
+	{
+		sum=sum+i*i;
+	}
+	return sum;
+}
+
+int main(void)	//这是一个测试
+{
+	int a;
+	int b;
 	int c;
-	a=3.5;
-	b=4.999999;
-	c=a+b;
+	a=3;
+	b=(4*3+3)/3;
+	c=add(a,b);
 	while(a<=10)
 	{
 		a=a+1;
 	}
-	if(c==7)
+	if(c==8)
 	{
-		func(c);
+		c=squaresum(c);
+	}
+	else
+	{
+		int d;
+		d=c/b+a;
 	}
 	return 0;
 }

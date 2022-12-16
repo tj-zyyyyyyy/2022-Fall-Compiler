@@ -13,3 +13,4 @@ vc140.pdb
 .vscode/settings.json
 out_Code.txt
 Graphviz/SyntaxTree.dot
+out_error.txt

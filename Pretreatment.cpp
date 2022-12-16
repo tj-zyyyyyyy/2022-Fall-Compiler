@@ -8,14 +8,14 @@ class Pretreatment
 {
 public:
 	/* 预处理子程序 */
-	string pretreat(const char* line)
+	string pretreat(const char *line)
 	{
-		char* lines = (char*)line;
+		char *lines = (char *)line;
 		string ret = "";
 
 		while (*lines != '\0' && lines != NULL)
 		{
-			char* loc, * noloc = strstr(lines, "//"), * nloc, * qloc1 = strchr(lines, '\"'), * qloc2 = NULL;   //注释和引号的位置
+			char *loc, *noloc = strstr(lines, "//"), *nloc, *qloc1 = strchr(lines, '\"'), *qloc2 = NULL; // 注释和引号的位置
 			if (multinote)
 			{
 				nrloc = strstr(lines, "*/");
@@ -38,7 +38,7 @@ public:
 					nloc = nlloc;
 				else
 					nloc = NULL;
-				if (qloc1 != NULL)  //处理\"
+				if (qloc1 != NULL) // 处理\"
 				{
 					if (*(qloc1 - 1) == '\\')
 						qloc1 = NULL;
@@ -50,7 +50,7 @@ public:
 				if (qloc1 != NULL && nloc != NULL)
 					loc = qloc1 < nloc ? qloc1 : nloc;
 				else
-					loc = qloc1 > nloc ? qloc1 : nloc;   //取非Epsilon
+					loc = qloc1 > nloc ? qloc1 : nloc; // 取非Epsilon
 
 				// 去除cout了
 				if (loc == qloc1)
@@ -71,7 +71,7 @@ public:
 					if (nloc == noloc)
 					{
 						ret += "//";
-						while (*lines != '\0')			
+						while (*lines != '\0')
 							lines++;
 					}
 					else if (nloc == nlloc)
@@ -81,19 +81,19 @@ public:
 						if (nrloc == NULL)
 						{
 							multinote = true;
-							while (*lines != '\0')						
+							while (*lines != '\0')
 								lines++;
 						}
 						else
 						{
-							while (lines != nrloc + 2)							
+							while (lines != nrloc + 2)
 								lines++;
 						}
 					}
 				}
 			}
 		}
-		cout << ret<<endl;
+		cout << ret << endl;
 		return ret;
 	}
 
@@ -104,7 +104,5 @@ public:
 
 private:
 	bool multinote = false;
-	char* nlloc, * nrloc;
+	char *nlloc, *nrloc;
 };
-
-

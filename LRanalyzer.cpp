@@ -1,4 +1,4 @@
-#include "LR分析器.h"
+﻿#include "LRanalyzer.h"
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -38,7 +38,7 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 	cout << setiosflags(ios::left) << setw(5) << "序号" << setw(COLWIDTH) << "状态" << setw(COLWIDTH * 2) << "符号" << setw(COLWIDTH) << "输入串" << endl;
 	StatusSymbolStack.clear();
 	StatusSymbolStack.push_back(make_pair(0, make_pair("#", "#")));
-	string* content_ptr = new string("#");
+	string *content_ptr = new string("#");
 	tc.push(content_ptr);
 
 	int idx_node = 1;
@@ -47,9 +47,9 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 	{
 		printStack(line);
 		string symbol = lex_res.front().first, content;
-		
+
 		int status = StatusSymbolStack.back().first;
-		int idx_sym = symbolmapping[symbol];    //是拿id(目前)还是name作为终结符
+		int idx_sym = symbolmapping[symbol]; // 是拿id(目前)还是name作为终结符
 		if (idx_sym == -1)
 		{
 			cerr << "语法分析错误！\'" << symbol << "\'字符在文法中不存在" << endl;
@@ -64,15 +64,15 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 		else if (cur.status == elem::shiftin)
 		{
 			if (symbol == "id")
-				content = ((info*)strtoull(lex_res.front().second.c_str(), NULL, 0))->name;
+				content = ((info *)strtoull(lex_res.front().second.c_str(), NULL, 0))->name;
 			else if (symbol == "num")
 				content = lex_res.front().second;
 			else
 				content = symbol;
 
-			StatusSymbolStack.push_back({ cur.next_state,{symbol,content} });
+			StatusSymbolStack.push_back({cur.next_state, {symbol, content}});
 			idxStack.push(idx_node);
-			if(drawtree)
+			if (drawtree)
 				out << "n" << idx_node++ << "[label=\"" << content << "\",color=red];" << endl;
 			/*if (line.find(content) != 0)
 			{
@@ -90,7 +90,7 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 			int idx_pro = cur.next_state;
 			Production pro = productions[idx_pro];
 
-			//右边
+			// 右边
 			vector<int> idx_sub;
 			if (pro.right_symbol.front() != "Epsilon")
 			{
@@ -106,7 +106,7 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 				}
 			}
 
-			//左边
+			// 左边
 			int idx_nt = symbolmapping[pro.left_symbol];
 			if (idx_nt == 0)
 			{
@@ -115,7 +115,7 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 			}
 
 			int next_state = LRtable[StatusSymbolStack.back().first][idx_nt].next_state;
-			StatusSymbolStack.push_back({ next_state,{pro.left_symbol,pro.left_symbol} });
+			StatusSymbolStack.push_back({next_state, {pro.left_symbol, pro.left_symbol}});
 			if (drawtree)
 			{
 				idxStack.push(idx_node);
@@ -123,15 +123,17 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 				if (idx_sub.size() != 0)
 				{
 					for (auto t = idx_sub.begin(); t != idx_sub.end(); t++)
-						out << "n" << idx_node - 1 << " -> " << "n" << *t << ";\n";
+						out << "n" << idx_node - 1 << " -> "
+							<< "n" << *t << ";\n";
 				}
-				else	//空串
+				else // 空串
 				{
 					out << "e" << idx_node << "[label=\"Epsilon\"];\n";
-					out << "n" << idx_node - 1 << " -> " << "e" << idx_node << ";\n";
+					out << "n" << idx_node - 1 << " -> "
+						<< "e" << idx_node << ";\n";
 				}
 			}
-			tc.reduce(pro);
+			tc.reduce(pro, idx_pro);
 		}
 		else if (cur.status == elem::acc)
 		{
@@ -143,9 +145,10 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 				system(".\\Graphviz\\dot.exe -Tpng .\\Graphviz\\SyntaxTree.dot -o SyntaxTree.png");
 				cout << "生成语法树图片成功！请见当前目录下SyntaxTree.png" << endl;
 			}
+			flag = tc.flag;
 			return 0;
 		}
-		
+
 		/*if (lex_res.size() == 1 && lex_res.front().first != "#")
 		{
 			cerr << "语法分析错误！输入字符串格式不匹配！" << endl;
@@ -154,7 +157,14 @@ int LRanalyzer::LRanalyze(string line, queue<pair<string, string>> lex_res, bool
 	}
 	cout << "语法分析完毕！未见#" << endl;
 	out.close();
+	flag = tc.flag;
+
 	return 0;
+}
+
+void LRanalyzer::printTempCode(const char *Filename)
+{
+	tc.printTempCode(Filename);
 }
 
 void LRanalyzer::printStack(string line)
@@ -167,6 +177,6 @@ void LRanalyzer::printStack(string line)
 		str_symbol += StatusSymbolStack[i].second.second + " ";
 	}
 	idx_print++;
-	cout << setiosflags(ios::left) << setw(5)<< idx_print << setw(COLWIDTH) << str_status << setw(COLWIDTH * 2) << str_symbol << setw(COLWIDTH) << line << endl;
+	cout << setiosflags(ios::left) << setw(5) << idx_print << setw(COLWIDTH) << str_status << setw(COLWIDTH * 2) << str_symbol << setw(COLWIDTH) << line << endl;
 	return;
 }
